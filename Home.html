@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สื่อการสอนการใช้สี - หน้าแรก</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* กำหนดฟอนต์หลักสำหรับ body */
+        body {
+            font-family: 'Kanit', sans-serif;
+            overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอนที่เกิดจากองค์ประกอบตกแต่ง */
+        }
+        /* กำหนด transition สำหรับปุ่มนำทางเพื่อให้มีการเปลี่ยนสีที่ราบรื่น */
+        .nav-button {
+            transition: all 0.3s ease;
+            background-color: #60a5fa; /* bg-blue-400 */
+            color: #ffffff; /* text-white */
+        }
+        /* กำหนดสไตล์เมื่อปุ่มนำทางถูกโฮเวอร์ */
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        /* กำหนดสไตล์สำหรับปุ่มนำทางที่ active (หน้าปัจจุบัน) */
+        .nav-button.active {
+            background-color: #fff !important; /* พื้นหลังสีขาว */
+            color: #2563eb !important; /* text-blue-600 */
+        }
+        /* กำหนดสไตล์เฉพาะสำหรับปุ่มลงทะเบียน */
+        .nav-button.register {
+            background-color: #22c55e !important; /* bg-green-500 */
+            color: #ffffff !important; /* text-white */
+        }
+        /* Plugin สำหรับ aspect-ratio (จำเป็นสำหรับ Tailwind V2) */
+        @layer utilities {
+          .aspect-w-16 { --tw-aspect-w: 16; }
+          .aspect-h-9 { --tw-aspect-h: 9; }
+          .aspect-video {
+            position: relative;
+            padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+          }
+          .aspect-video > * {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+        }
+    </style>
+    <script>
+        // ไฮไลท์ปุ่มนำทางที่ active ตาม URL ปัจจุบัน
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-button');
+            // ดึงชื่อไฟล์ปัจจุบันจาก URL (เช่น "home.html")
+            const current = window.location.pathname.split('/').pop().toLowerCase();
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').toLowerCase();
+                // ตรวจสอบว่าลิงก์ตรงกับหน้าปัจจุบันหรือไม่
+                if (
+                    href === current ||
+                    (href === 'index.html' && (current === '' || current === 'index.html' || current === 'home.html')) ||
+                    (href === 'home.html' && (current === '' || current === 'index.html' || current === 'home.html'))
+                ) {
+                    link.classList.add('active'); // เพิ่มคลาส active
+                } else {
+                    // หากไม่ใช่ปุ่มลงทะเบียน ให้ตั้งค่าเป็นสีน้ำเงินเริ่มต้น
+                    if (!link.classList.contains('register')) {
+                        link.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body class="bg-blue-50 relative">
+
+    <!-- START: Decorative Background Elements -->
+    <!-- องค์ประกอบตกแต่งพื้นหลัง: วงกลมเบลอๆ เพื่อสร้างมิติ -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob -translate-x-24 -translate-y-24"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-2000 translate-x-24 -translate-y-24"></div>
+    <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-4000"></div>
+    <!-- END: Decorative Background Elements -->
+
+    <!-- ส่วนหัว (Header Section) -->
+    <header class="bg-gradient-to-r from-blue-500 to-blue-700 shadow-lg p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <!-- โลโก้ DBT (ใช้ Placeholder) -->
+                <img src="https://placehold.co/56x56/ffffff/3b82f6?text=DBT" alt="ตราวิทยาลัย" class="h-14 w-14 rounded-full object-cover border-2 border-white shadow-md">
+                <!-- โลโก้วิทยาลัย (ใช้ Placeholder) -->
+                <img src="https://placehold.co/56x56/ffffff/3b82f6?text=LOGO" alt="ตราวิทยาลัย" class="h-14 w-14 rounded-full object-cover border-2 border-white shadow-md">
+            </div>
+            <!-- แถบนำทาง (Navigation Bar) -->
+            <nav class="flex items-center space-x-1 md:space-x-2">
+                <a href="Home.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">หน้าแรก</a>
+                <a href="Content.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">เนื้อหา</a>
+                <a href="After Study.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">แบบทดสอบ</a>
+                <a href="Contact.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">ผู้จัดทำ</a>
+                <a href="Login.html" class="nav-button register font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">ลงทะเบียน</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- เนื้อหาหลัก (Main Content) -->
+    <!-- ตั้งค่า z-index เพื่อให้เนื้อหาอยู่ด้านบนของพื้นหลังตกแต่ง -->
+    <main class="container mx-auto p-4 md:p-8 relative z-0">
+        <h1 class="text-4xl lg:text-5xl font-bold text-center text-blue-800 mb-8 drop-shadow-md">สื่อการสอนเรื่องการใช้สี</h1>
+        
+        <!-- ส่วนวิดีโอ -->
+        <!-- START: Centered Video Container -->
+        <!-- เพิ่ม max-w-4xl และ mx-auto เพื่อจำกัดความกว้างและจัดให้อยู่ตรงกลาง -->
+        <div class="bg-white rounded-xl shadow-2xl p-4 md:p-6 mb-12 transform hover:scale-105 transition-transform duration-300 max-w-4xl mx-auto">
+             <div class="aspect-video">
+                <iframe class="rounded-lg" src="https://www.youtube.com/embed/GLiApwoaHwg?si=NBsVup2KKvOR56bP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- END: Centered Video Container -->
+
+        <!-- ส่วนคำอธิบายรายวิชา -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl p-6 md:p-8 relative overflow-hidden">
+            <!-- START: Decorative side element -->
+            <!-- แถบสีตกแต่งด้านข้างของการ์ด -->
+            <div class="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-blue-400 to-purple-500"></div>
+            <!-- END: Decorative side element -->
+            <h2 class="text-3xl font-semibold text-blue-700 mb-4 pl-4">คำอธิบายรายวิชา</h2>
+            <p class="text-gray-800 leading-relaxed pl-4">
+                ยินดีต้อนรับเข้าสู่สื่อการสอนเรื่อง "การใช้สี" ในรายวิชานี้ เราจะพาทุกท่านไปสำรวจโลกของสีสัน เรียนรู้ตั้งแต่ทฤษฎีสีพื้นฐาน ความหมายของสีแต่ละสี จิตวิทยาของสีที่ส่งผลต่ออารมณ์และความรู้สึก ไปจนถึงเทคนิคการนำสีไปประยุกต์ใช้ในงานออกแบบต่างๆ เพื่อสร้างสรรค์ผลงานที่สวยงาม มีเอกลักษณ์ และสื่อสารได้อย่างมีประสิทธิภาพ ไม่ว่าคุณจะเป็นนักเรียน นักศึกษา หรือผู้ที่สนใจในงานออกแบบ สื่อการสอนชุดนี้จะมอบความรู้และแรงบันดาลใจให้คุณอย่างแน่นอน
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>

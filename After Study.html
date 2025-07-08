@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สื่อการสอนการใช้สี - แบบทดสอบ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: 'Kanit', sans-serif; overflow-x: hidden; }
+        .nav-button { transition: all 0.3s ease; background-color: #60a5fa; color: #fff; }
+        .nav-button:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .nav-button.active { background-color: #fff !important; color: #2563eb !important; }
+        .nav-button.register { background-color: #22c55e !important; color: #fff !important; }
+        .test-link { transition: all 0.3s ease; }
+        .test-link:hover { transform: translateX(5px); background-color: #eff6ff; }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-button');
+            const current = window.location.pathname.split('/').pop().toLowerCase();
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').toLowerCase();
+                if (href === 'after study.html' && current.includes('after study')) {
+                    link.classList.add('active');
+                } else if (href === current) {
+                     link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</head>
+<body class="bg-blue-50 relative">
+
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob -translate-x-24 -translate-y-24"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-2000 translate-x-24 -translate-y-24"></div>
+    <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-4000"></div>
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-blue-700 shadow-lg p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://placehold.co/56x56/ffffff/3b82f6?text=DBT" alt="ตราวิทยาลัย" class="h-14 w-14 rounded-full object-cover border-2 border-white shadow-md">
+                <img src="https://placehold.co/56x56/ffffff/3b82f6?text=LOGO" alt="ตราวิทยาลัย" class="h-14 w-14 rounded-full object-cover border-2 border-white shadow-md">
+            </div>
+            <nav class="flex items-center space-x-1 md:space-x-2">
+                <a href="Home.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">หน้าแรก</a>
+                <a href="Content.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">เนื้อหา</a>
+                <a href="After Study.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">แบบทดสอบ</a>
+                <a href="Contact.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">ผู้จัดทำ</a>
+                <a href="Login.html" class="nav-button register font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">ลงทะเบียน</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8 relative z-0">
+        <h1 class="text-4xl lg:text-5xl font-bold text-center text-blue-800 mb-8 drop-shadow-md">เลือกแบบทดสอบ</h1>
+        <div class="bg-white/80 backdrop-blur-sm rounded-xl shadow-2xl p-6 md:p-8 relative overflow-hidden max-w-4xl mx-auto">
+            <div class="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-green-400 to-blue-500"></div>
+            <ul class="space-y-3">
+                <li><a href="Post-test1.html" class="test-link flex items-center p-4 rounded-lg text-blue-800 hover:text-blue-600 font-semibold text-lg"><i class="fas fa-file-alt w-8 text-center text-green-500"></i>แบบทดสอบบทที่ 1: ทฤษฎีการใช้สีและวงล้อสี</a></li>
+                <li><a href="Post-test2.html" class="test-link flex items-center p-4 rounded-lg text-blue-800 hover:text-blue-600 font-semibold text-lg"><i class="fas fa-file-alt w-8 text-center text-green-500"></i>แบบทดสอบบทที่ 2: อารมณ์และความรู้สึกของสี</a></li>
+                <li><a href="Post-test3.html" class="test-link flex items-center p-4 rounded-lg text-blue-800 hover:text-blue-600 font-semibold text-lg"><i class="fas fa-file-alt w-8 text-center text-green-500"></i>แบบทดสอบบทที่ 3: การเลือกชุดสี</a></li>
+                <li><a href="Post-test4.html" class="test-link flex items-center p-4 rounded-lg text-blue-800 hover:text-blue-600 font-semibold text-lg"><i class="fas fa-file-alt w-8 text-center text-green-500"></i>แบบทดสอบบทที่ 4: การใช้สีในงานออกแบบ</a></li>
+                <li><a href="Post-test5.html" class="test-link flex items-center p-4 rounded-lg text-blue-800 hover:text-blue-600 font-semibold text-lg"><i class="fas fa-file-alt w-8 text-center text-green-500"></i>แบบทดสอบบทที่ 5: สัดส่วนการใช้สี</a></li>
+                <li><a href="Post-test6.html" class="test-link flex items-center p-4 rounded-lg text-blue-800 hover:text-blue-600 font-semibold text-lg"><i class="fas fa-file-alt w-8 text-center text-green-500"></i>แบบทดสอบบทที่ 6: การสร้างงานออกแบบจาก Color Palette</a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

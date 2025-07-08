@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบหลังเรียนบทที่ 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; overflow-x: hidden; }
+        .sidebar a { transition: all 0.2s ease; }
+        .sidebar a:hover, .sidebar a.active {
+            background-color: white;
+            color: #2563eb; /* text-blue-600 */
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body class="bg-blue-50 relative">
+
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-green-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob -translate-x-24 -translate-y-24"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-2000 translate-x-24 -translate-y-24"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-red-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-4000"></div>
+
+    <div class="container mx-auto flex flex-col md:flex-row p-4 md:p-8 gap-8 relative z-0">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar md:w-64 lg:w-72 bg-gradient-to-b from-blue-500 to-blue-700 text-white p-6 rounded-2xl shadow-lg self-start sticky top-8">
+            <h2 class="text-2xl font-bold mb-6 border-b-2 border-blue-400 pb-2">แบบทดสอบ</h2>
+            <div class="space-y-2">
+                <a href="Post-test1.html" class="block font-semibold py-2 px-4 rounded-lg">แบบทดสอบบทที่ 1</a>
+                <a href="Post-test2.html" class="active block font-semibold py-2 px-4 rounded-lg">แบบทดสอบบทที่ 2</a>
+                <a href="Post-test3.html" class="block font-semibold py-2 px-4 rounded-lg">แบบทดสอบบทที่ 3</a>
+                <a href="Post-test4.html" class="block font-semibold py-2 px-4 rounded-lg">แบบทดสอบบทที่ 4</a>
+                <a href="Post-test5.html" class="block font-semibold py-2 px-4 rounded-lg">แบบทดสอบบทที่ 5</a>
+                <a href="Post-test6.html" class="block font-semibold py-2 px-4 rounded-lg">แบบทดสอบบทที่ 6</a>
+            </div>
+             <a href="After Study.html" class="mt-8 inline-block text-sm text-blue-200 hover:text-white hover:underline">&larr; กลับสู่เมนูรวมแบบทดสอบ</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl p-2 md:p-4 relative overflow-hidden">
+                 <div class="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-green-400 to-blue-500"></div>
+                 <div class="pl-4">
+                    <h1 class="text-3xl lg:text-4xl font-bold text-blue-800 my-4">แบบทดสอบหลังเรียนบทที่ 2</h1>
+                 </div>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc5S34_MjD48LS9eDydtURP_K9d6ndqpamdiKsssZAChi3n8g/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0" class="rounded-lg">กำลังโหลด…</iframe>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สื่อการสอนการใช้สี - ผู้จัดทำ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: 'Kanit', sans-serif; overflow-x: hidden; }
+        .nav-button { transition: all 0.3s ease; background-color: #60a5fa; color: #fff; }
+        .nav-button:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .nav-button.active { background-color: #fff !important; color: #2563eb !important; }
+        .nav-button.register { background-color: #22c55e !important; color: #fff !important; }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-button');
+            const current = window.location.pathname.split('/').pop().toLowerCase();
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').toLowerCase();
+                if (href === 'contact.html' && current.includes('contact')) {
+                    link.classList.add('active');
+                } else if (href === current) {
+                     link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</head>
+<body class="bg-blue-50 relative">
+
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob -translate-x-24 -translate-y-24"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-2000 translate-x-24 -translate-y-24"></div>
+    <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-4000"></div>
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-blue-700 shadow-lg p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://placehold.co/56x56/ffffff/3b82f6?text=DBT" alt="ตราวิทยาลัย" class="h-14 w-14 rounded-full object-cover border-2 border-white shadow-md">
+                <img src="https://placehold.co/56x56/ffffff/3b82f6?text=LOGO" alt="ตราวิทยาลัย" class="h-14 w-14 rounded-full object-cover border-2 border-white shadow-md">
+            </div>
+            <nav class="flex items-center space-x-1 md:space-x-2">
+                <a href="Home.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">หน้าแรก</a>
+                <a href="Content.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">เนื้อหา</a>
+                <a href="After Study.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">แบบทดสอบ</a>
+                <a href="Contact.html" class="nav-button font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">ผู้จัดทำ</a>
+                <a href="Login.html" class="nav-button register font-semibold py-2 px-3 md:px-6 rounded-full shadow-md text-sm md:text-base">ลงทะเบียน</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8 relative z-0">
+        <h1 class="text-4xl lg:text-5xl font-bold text-center text-blue-800 mb-8 drop-shadow-md">ผู้จัดทำ</h1>
+        <div class="bg-white/80 backdrop-blur-sm rounded-xl shadow-2xl p-6 md:p-8 relative overflow-hidden max-w-4xl mx-auto">
+            <div class="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-blue-400 to-purple-500"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pl-4">
+                <!-- Person 1 Card -->
+                <div class="bg-white/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/120x120/e0e7ff/3b82f6?text=นัฐวัฒ" alt="รูปภาพผู้จัดทำ 1" class="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-white mb-4">
+                    <h2 class="text-2xl font-semibold text-blue-800">นายนัฐวัฒ รอดเเก้ว</h2>
+                    <p class="text-gray-600 font-medium">ผู้จัดทำเว็บไซต์</p>
+                    <p class="text-gray-500 mt-2"><i class="fas fa-envelope mr-2"></i>nattawat6099@gmail.com</p>
+                </div>
+                <!-- Person 2 Card -->
+                <div class="bg-white/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/120x120/e0e7ff/3b82f6?text=นราวิชญ์" alt="รูปภาพผู้จัดทำ 2" class="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-white mb-4">
+                    <h2 class="text-2xl font-semibold text-blue-800">นายนราวิชญ์ แก้วสัมฤทธิ์</h2>
+                    <p class="text-gray-600 font-medium">ผู้จัดหาข้อมูลสื่อการสอน</p>
+                    <p class="text-gray-500 mt-2"><i class="fas fa-envelope mr-2"></i>narawit20000000004@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

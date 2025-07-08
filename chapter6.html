@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 6: การสร้างงานออกแบบจาก Color Palette</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; overflow-x: hidden; }
+        .sidebar a { transition: all 0.2s ease; }
+        .sidebar a:hover, .sidebar a.active {
+            background-color: white;
+            color: #2563eb; /* text-blue-600 */
+            transform: translateX(4px);
+        }
+        table th, table td { padding: 0.75rem 1rem; border: 1px solid #e5e7eb; }
+        table th { background-color: #eff6ff; }
+    </style>
+</head>
+<body class="bg-blue-50 relative">
+
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob -translate-x-24 -translate-y-24"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-2000 translate-x-24 -translate-y-24"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-4000"></div>
+
+    <div class="container mx-auto flex flex-col md:flex-row p-4 md:p-8 gap-8 relative z-0">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar md:w-64 lg:w-72 bg-gradient-to-b from-blue-500 to-blue-700 text-white p-6 rounded-2xl shadow-lg self-start sticky top-8">
+            <h2 class="text-2xl font-bold mb-6 border-b-2 border-blue-400 pb-2">บทเรียน</h2>
+            <div class="space-y-2">
+                <a href="chapter1.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 1: ทฤษฎีสี</a>
+                <a href="chapter2.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 2: จิตวิทยาสี</a>
+                <a href="chapter3.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 3: ชุดสี</a>
+                <a href="chapter4.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 4: การใช้สีในงานออกแบบ</a>
+                <a href="chapter5.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 5: สัดส่วนสี</a>
+                <a href="chapter6.html" class="active block font-semibold py-2 px-4 rounded-lg">บทที่ 6: Color Palette</a>
+            </div>
+             <a href="Content.html" class="mt-8 inline-block text-sm text-blue-200 hover:text-white hover:underline">&larr; กลับสู่เมนูเนื้อหา</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-10 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-blue-400 to-purple-500"></div>
+                <div class="pl-4">
+                    <h1 class="text-3xl lg:text-4xl font-bold text-blue-800 mb-6">บทที่ 6: การสร้างงานออกแบบจาก Color Palette</h1>
+                    
+                    <div class="space-y-6 text-gray-800 leading-relaxed text-lg">
+                        <div>
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-2">6.1 ทำความเข้าใจกับ Color Palette</h2>
+                            <p>Color Palette คือชุดสีที่เลือกมาใช้ร่วมกันในงานออกแบบ Palette ที่ดีควรประกอบด้วย สีหลัก สีรอง และสีเน้น การเลือก Palette ที่เหมาะสมจะทำให้งานออกแบบดูเป็นมืออาชีพและมีความสอดคล้องกัน</p>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-2">6.2 ขั้นตอนออกแบบจาก Palette</h2>
+                            <ul class="list-decimal list-inside space-y-2">
+                                <li>เลือกชุดสี จากเว็บไซต์หรือสร้างเองให้เข้ากับอารมณ์ของงาน</li>
+                                <li>กำหนดบทบาทของแต่ละสีใน Palette (สีหลัก, สีรอง, สีเน้น)</li>
+                                <li>นำสีไปใช้กับองค์ประกอบต่างๆ ของงาน เช่น ข้อความ พื้นหลัง ปุ่ม โดยอาจใช้กฎ 60:30:10 เป็นแนวทาง</li>
+                                <li>ทดสอบความกลมกลืนของสี และตรวจสอบความสามารถในการอ่าน (Readability) ของข้อความ</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-2">6.3 ตัวอย่าง Color Palette</h2>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse rounded-lg overflow-hidden shadow-md">
+                                    <thead>
+                                        <tr>
+                                            <th>สี</th>
+                                            <th>รหัส HEX</th>
+                                            <th>การใช้งาน</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td style="background-color:#6A0DAD; color:white;">ม่วงเข้ม</td><td>#6A0DAD</td><td>สีหลัก</td></tr>
+                                        <tr><td style="background-color:#B19CD9;">ม่วงอ่อน</td><td>#B19CD9</td><td>สีรอง</td></tr>
+                                        <tr><td style="background-color:#FFD700;">ทอง</td><td>#FFD700</td><td>สีเน้น</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 3: การเลือกชุดสี (Color Schemes)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; overflow-x: hidden; }
+        .sidebar a { transition: all 0.2s ease; }
+        .sidebar a:hover, .sidebar a.active {
+            background-color: white;
+            color: #2563eb; /* text-blue-600 */
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body class="bg-blue-50 relative">
+
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob -translate-x-24 -translate-y-24"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-2000 translate-x-24 -translate-y-24"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-4000"></div>
+
+    <div class="container mx-auto flex flex-col md:flex-row p-4 md:p-8 gap-8 relative z-0">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar md:w-64 lg:w-72 bg-gradient-to-b from-blue-500 to-blue-700 text-white p-6 rounded-2xl shadow-lg self-start sticky top-8">
+            <h2 class="text-2xl font-bold mb-6 border-b-2 border-blue-400 pb-2">บทเรียน</h2>
+            <div class="space-y-2">
+                <a href="chapter1.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 1: ทฤษฎีสี</a>
+                <a href="chapter2.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 2: จิตวิทยาสี</a>
+                <a href="chapter3.html" class="active block font-semibold py-2 px-4 rounded-lg">บทที่ 3: ชุดสี</a>
+                <a href="chapter4.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 4: การใช้สีในงานออกแบบ</a>
+                <a href="chapter5.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 5: สัดส่วนสี</a>
+                <a href="chapter6.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 6: Color Palette</a>
+            </div>
+             <a href="Content.html" class="mt-8 inline-block text-sm text-blue-200 hover:text-white hover:underline">&larr; กลับสู่เมนูเนื้อหา</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-10 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-blue-400 to-purple-500"></div>
+                <div class="pl-4">
+                    <h1 class="text-3xl lg:text-4xl font-bold text-blue-800 mb-6">บทที่ 3: การเลือกชุดสี (Color Schemes)</h1>
+                    
+                    <div class="space-y-6 text-gray-800 leading-relaxed text-lg">
+                        <div>
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-2">3.1 ความสำคัญของการเลือกชุดสี</h2>
+                            <p>ชุดสีที่ดีช่วยให้สื่อสารภาพลักษณ์ของแบรนด์หรือเนื้อหาได้ชัดเจน ลดความสับสน และทำให้ผู้ใช้จดจำได้ง่าย</p>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-2">3.2 รูปแบบของชุดสี</h2>
+                            <ul class="space-y-4">
+                                <li><b>1. สีตรงข้าม (Complementary):</b> สีที่อยู่ฝั่งตรงข้ามของวงล้อ เช่น แดง–เขียว ใช้สร้างความโดดเด่น เช่น ปุ่มบนเว็บไซต์</li>
+                                <li><b>2. สีใกล้เคียง (Analogous):</b> สีที่อยู่ติดกัน เช่น เหลือง–ส้ม–แดง สื่อถึงความกลมกลืน ใช้กับธีมธรรมชาติ</li>
+                                <li><b>3. สีสามเหลี่ยม (Triadic):</b> ห่างกันเท่า ๆ กัน เช่น แดง–เหลือง–น้ำเงิน สมดุลและมีพลัง ใช้ในโลโก้หรือการออกแบบกราฟิก</li>
+                                <li><b>4. สีเดี่ยว (Monochromatic):</b> เฉดสีเดียวในความเข้มต่าง ๆ เช่น ฟ้าอ่อน–กลาง–เข้ม ให้ความเรียบหรู เรียบง่าย</li>
+                                <li><b>5. สีสี่เหลี่ยม (Tetradic):</b> ใช้ 4 สี เช่น แดง–เขียว–น้ำเงิน–ส้ม เหมาะกับงานที่ต้องการหลากหลายแต่ยังสมดุล</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-2">3.3 เครื่องมือช่วยเลือกชุดสี</h2>
+                            <ul class="list-disc list-inside">
+                                <li><a href="https://coolors.co/" target="_blank" class="text-blue-600 hover:underline">Coolors.co</a></li>
+                                <li><a href="https://color.adobe.com/" target="_blank" class="text-blue-600 hover:underline">Adobe Color</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 5: สัดส่วนการใช้สี (Color Proportion)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; overflow-x: hidden; }
+        .sidebar a { transition: all 0.2s ease; }
+        .sidebar a:hover, .sidebar a.active {
+            background-color: white;
+            color: #2563eb; /* text-blue-600 */
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body class="bg-blue-50 relative">
+
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob -translate-x-24 -translate-y-24"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-2000 translate-x-24 -translate-y-24"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-4000"></div>
+
+    <div class="container mx-auto flex flex-col md:flex-row p-4 md:p-8 gap-8 relative z-0">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar md:w-64 lg:w-72 bg-gradient-to-b from-blue-500 to-blue-700 text-white p-6 rounded-2xl shadow-lg self-start sticky top-8">
+            <h2 class="text-2xl font-bold mb-6 border-b-2 border-blue-400 pb-2">บทเรียน</h2>
+            <div class="space-y-2">
+                <a href="chapter1.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 1: ทฤษฎีสี</a>
+                <a href="chapter2.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 2: จิตวิทยาสี</a>
+                <a href="chapter3.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 3: ชุดสี</a>
+                <a href="chapter4.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 4: การใช้สีในงานออกแบบ</a>
+                <a href="chapter5.html" class="active block font-semibold py-2 px-4 rounded-lg">บทที่ 5: สัดส่วนสี</a>
+                <a href="chapter6.html" class="block font-semibold py-2 px-4 rounded-lg">บทที่ 6: Color Palette</a>
+            </div>
+             <a href="Content.html" class="mt-8 inline-block text-sm text-blue-200 hover:text-white hover:underline">&larr; กลับสู่เมนูเนื้อหา</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-10 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-blue-400 to-purple-500"></div>
+                <div class="pl-4">
+                    <h1 class="text-3xl lg:text-4xl font-bold text-blue-800 mb-6">บทที่ 5: สัดส่วนการใช้สี (Color Proportion)</h1>
+                    
+                    <div class="space-y-6 text-gray-800 leading-relaxed text-lg">
+                        <div>
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-2">5.1 หลัก 60:30:10</h2>
+                            <p>เป็นแนวทางยอดนิยมในการจัดสัดส่วนการใช้สี เพื่อสร้างความสมดุลและความน่าสนใจทางสายตา</p>
+                            <ul class="list-disc list-inside mt-2 space-y-2 pl-4">
+                                <li><b>60% สีหลัก (Dominant Color):</b> เป็นสีพื้นหลังหรือพื้นที่ส่วนใหญ่ของงาน</li>
+                                <li><b>30% สีรอง (Secondary Color):</b> เป็นสีที่ใช้เสริมสีหลัก ทำให้งานดูมีมิติ</li>
+                                <li><b>10% สีเน้น (Accent Color):</b> เป็นสีที่โดดเด่น ใช้สำหรับส่วนที่ต้องการเน้นเป็นพิเศษ เช่น ปุ่ม Call-to-action</li>
+                            </ul>
+                            <p class="mt-4 p-4 bg-blue-100 border-l-4 border-blue-500 rounded-r-lg"><b>ตัวอย่าง:</b> เว็บไซต์สุขภาพ<br>
+                            สีหลัก: ขาว (60%)<br>
+                            สีรอง: เขียวอ่อน (30%)<br>
+                            สีเน้น: เขียวเข้ม (10%)</p>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-2">5.2 เทคนิคเพิ่มเติม</h2>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>อย่าใช้สีที่มีความอิ่มตัว (Saturation) สูงมากในทุกส่วน เพราะจะทำให้ดูลายตา</li>
+                                <li>ใช้สีเข้มกับพื้นหลัง เพื่อเน้นข้อความสีอ่อนให้โดดเด่น</li>
+                                <li>ใช้สีอ่อนในพื้นที่กว้างๆ เช่น ฟ้าอ่อนเป็นพื้นหลัง จะทำให้รู้สึกสบายตา</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-2">5.3 การใช้สีใน Infographic และ Poster</h2>
+                             <ul class="list-disc list-inside space-y-2">
+                                <li><b>หัวข้อใหญ่:</b> ใช้สีเน้น (Accent Color) เพื่อดึงดูดความสนใจ</li>
+                                <li><b>เนื้อหา:</b> ใช้สีรอง (Secondary Color) หรือสีในโทนเดียวกับสีหลัก</li>
+                                <li><b>ฉากหลัง:</b> ใช้สีหลัก (Dominant Color)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
